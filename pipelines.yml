@@ -1,0 +1,14 @@
+pipelines:
+  name: S_B_Jen
+  steps:
+    - name: S_B_Jen_step
+      type: Jenkins
+      configuration:
+        jenkinsJobName: validate
+        buildParameters:
+          project_name: '${project_name}'
+          project_id: '${project_id}'
+          project_key: '${project_key}'
+          step_url: '${step_url}'
+        integrations:
+          - name: S_Rahul
